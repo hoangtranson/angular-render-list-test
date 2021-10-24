@@ -1,0 +1,23 @@
+<h3 [ngStyle]="{ 'margin-bottom.px': 16 }">Normal Rendering - 1000 elements</h3>
+<nz-table
+  #basicTable
+  [nzShowPagination]="false"
+  [nzScroll]="{ y: '400px' }"
+  [nzFrontPagination]="false"
+  [nzData]="listOfData"
+>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.name }}</td>
+      <td>{{ data.age }}</td>
+      <td>{{ data.address }}</td>
+    </tr>
+  </tbody>
+</nz-table>
